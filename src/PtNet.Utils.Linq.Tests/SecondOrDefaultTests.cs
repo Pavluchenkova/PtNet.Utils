@@ -10,7 +10,7 @@ namespace PtNet.Utils.Linq.Tests
         private readonly int[] _testArray = { 3, 10, 2, 9, 5, 7, 1, 4, 6, 8 };
 
         [TestMethod]
-        public void SecondOrDefault_should_return_second_element_in_collection()
+        public void SecondOrDefault_should_return_second_element_from_collection()
         {
             var expected = _testArray[1];
 
@@ -18,7 +18,13 @@ namespace PtNet.Utils.Linq.Tests
 
             Assert.AreEqual(expected, actual);
         }
-        
+
+        [TestMethod]
+        public void SecondOrDefault_should_return_second_element_from_collection_by_predicate()
+        {
+            throw new NotImplementedException();
+        }
+
         [TestMethod]
         public void SecondOrDefault_should_return_default_value_with_empty_collection()
         {

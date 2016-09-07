@@ -18,10 +18,16 @@ namespace PtNet.Utils.Linq.Tests
 
             Assert.AreEqual(expected, actual);
         }
-        
+
+        [TestMethod]
+        public void Second_should_return_second_element_in_collection_by_predicate()
+        {
+            throw new NotImplementedException();
+        }
+
         [TestMethod]
         [ExpectedException(typeof(InvalidOperationException))]
-        public void Second_should_rise_InvalidOperationException_with_empty_collection()
+        public void Second_should_raise_InvalidOperationException_with_empty_collection()
         {
             var emptyCollection = new List<int>();
 

@@ -45,8 +45,10 @@
     <Compile Include="FirstOrDefinedTests.cs" />
     <Compile Include="OrderByTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomTests.cs" />
     <Compile Include="SecondOrDefaultTests.cs" />
     <Compile Include="SecondTests.cs" />
+    <Compile Include="WhereNotTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PtNet.Utils.Linq\PtNet.Utils.Linq.csproj">

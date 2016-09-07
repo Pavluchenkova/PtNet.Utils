@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace PtNet.Utils.Linq.Tests
 {
@@ -26,6 +27,12 @@ namespace PtNet.Utils.Linq.Tests
             var actual = _testArray.OrderBy(i => i, SortingDirection.Ascending);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void OrderBy_with_multiple_predicates_should_sort_collection_properly()
+        {
+            throw new NotImplementedException();
         }
     }
 }
