@@ -51,10 +51,13 @@
     <Compile Include="WhereNotTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PtNet.Utils.Linq\PtNet.Utils.csproj">
+    <ProjectReference Include="..\PtNet.Utils\PtNet.Utils.csproj">
       <Project>{abdb7e98-438d-431c-84ab-c10fe7a947d0}</Project>
       <Name>PtNet.Utils</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
