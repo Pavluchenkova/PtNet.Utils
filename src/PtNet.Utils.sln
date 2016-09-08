@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PtNet.Utils.Linq", "PtNet.Utils.Linq\PtNet.Utils.Linq.csproj", "{ABDB7E98-438D-431C-84AB-C10FE7A947D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PtNet.Utils", "PtNet.Utils\PtNet.Utils.csproj", "{ABDB7E98-438D-431C-84AB-C10FE7A947D0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PtNet.Utils.Linq.Tests", "PtNet.Utils.Linq.Tests\PtNet.Utils.Linq.Tests.csproj", "{D4461CF3-2277-4AB1-9B3B-5CDB9D038BF9}"
 EndProject

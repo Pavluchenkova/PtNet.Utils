@@ -7,8 +7,8 @@
     <ProjectGuid>{ABDB7E98-438D-431C-84AB-C10FE7A947D0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PtNet.Utils.Linq</RootNamespace>
-    <AssemblyName>PtNet.Utils.Linq</AssemblyName>
+    <RootNamespace>PtNet.Utils</RootNamespace>
+    <AssemblyName>PtNet.Utils</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EnumerableExtensions.cs" />
+    <Compile Include="Linq\EnumerableExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SortingDirection.cs" />
+    <Compile Include="Linq\SortingDirection.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

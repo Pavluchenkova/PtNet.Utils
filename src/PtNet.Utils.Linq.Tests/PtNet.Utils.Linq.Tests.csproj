@@ -51,9 +51,9 @@
     <Compile Include="WhereNotTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PtNet.Utils.Linq\PtNet.Utils.Linq.csproj">
+    <ProjectReference Include="..\PtNet.Utils.Linq\PtNet.Utils.csproj">
       <Project>{abdb7e98-438d-431c-84ab-c10fe7a947d0}</Project>
-      <Name>PtNet.Utils.Linq</Name>
+      <Name>PtNet.Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
