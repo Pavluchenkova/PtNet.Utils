@@ -8,6 +8,8 @@ namespace PtNet.Utils.Linq.Tests
     [TestClass]
     public class FirstOrDefinedTests
     {
+        private readonly int[] _testArray = { 3, 10, 2, 9, 5, 7, 1, 4, 6, 8 };
+
         [TestMethod]
         public void FirstOrDefined_should_return_defined_value_with_empty_collection()
         {
@@ -27,7 +29,11 @@ namespace PtNet.Utils.Linq.Tests
         [TestMethod]
         public void FirstOrDefined_should_return_first_value_from_collection()
         {
-            throw new NotImplementedException();
+            var expected = _testArray[0];
+
+            var actual = _testArray.FirstOrDefined(99);
+
+            Assert.AreEqual(expected, actual);
         }
     }
 }

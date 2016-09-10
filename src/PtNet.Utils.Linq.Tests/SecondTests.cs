@@ -7,7 +7,7 @@ namespace PtNet.Utils.Linq.Tests
     [TestClass]
     public class SecondTests
     {
-        private readonly int[] _testArray = { 3, 10, 2, 9, 5, 7, 1, 4, 6, 8 };
+        private readonly int[] _testArray = { 3, 10, 2, 9, 5, 2, 7, 1, 4, 6, 8 };
 
         [TestMethod]
         public void Second_should_return_second_element_in_collection()
@@ -22,7 +22,11 @@ namespace PtNet.Utils.Linq.Tests
         [TestMethod]
         public void Second_should_return_second_element_in_collection_by_predicate()
         {
-            throw new NotImplementedException();
+            var expected = 2;
+
+            var actual = _testArray.Second(i => i == 2);
+
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]

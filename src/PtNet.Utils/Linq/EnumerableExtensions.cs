@@ -17,13 +17,8 @@ namespace PtNet.Utils.Linq
 					return source.OrderByDescending(keySelector);
 			}
 		}
-		
-		public static IEnumerable<TSource> OrderBy<TSource, TKey>(this IEnumerable<TSource> source, params Func<TSource, TKey>[] keySelectors)
-		{
-			throw new NotImplementedException();
-		}
 
-	    public static IEnumerable<TSource> WhereNot<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> keySelector)
+        public static IEnumerable<TSource> WhereNot<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> keySelector)
 	    {
 	        return source.Where(p => !keySelector(p));
 	    }
@@ -32,7 +27,7 @@ namespace PtNet.Utils.Linq
         {
             var result = source.FirstOrDefault();
 
-            if (result == null)
+            if (EqualityComparer<TSource>.Default.Equals(result, default(TSource)))
             {
                 return defaultResult;
             }
@@ -42,7 +37,13 @@ namespace PtNet.Utils.Linq
 
         public static TSource FirstOrDefined<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> keySelector, TSource defaultResult)
         {
-            throw new NotImplementedException();
+            var result = source.FirstOrDefault(p => keySelector(p)) ;
+            
+            if (EqualityComparer<TSource>.Default.Equals(result, default(TSource)))
+            {
+                return defaultResult;
+            }
+            return result;
         }
 
         public static TSource Second<TSource>(this IEnumerable<TSource> source)
@@ -67,27 +68,32 @@ namespace PtNet.Utils.Linq
 
         public static TSource SecondOrDefined<TSource>(this IEnumerable<TSource> source, TSource defaultResult)
         {
-            throw new NotImplementedException();
+            return source.Skip(1).FirstOrDefined(defaultResult);    
         }
 
         public static TSource SecondOrDefined<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> keySelector, TSource defaultResult)
 	    {
-	        throw new NotImplementedException();
-	    }
+            return source.Where(keySelector).SecondOrDefined(defaultResult);  
+        }
 
         public static TSource Random<TSource>(this IEnumerable<TSource> source)
         {
-            throw new NotImplementedException();
+            var rand = new Random();
+            
+            return source.ElementAt(rand.Next(source.Count()));
         }
 
         public static IEnumerable<TSource> Shuffle<TSource>(this IEnumerable<TSource> source)
         {
-            throw new NotImplementedException();
+            return source.OrderBy(elem => Guid.NewGuid());
         }
 
         public static void ForEach<TSource>(this IEnumerable<TSource> source, Action<TSource> action)
         {
-            throw new NotImplementedException();
+            foreach(var item in source)
+            {
+                action(item);
+            }
         }
     }
 }

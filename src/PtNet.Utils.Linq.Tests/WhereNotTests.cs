@@ -10,10 +10,14 @@ namespace PtNet.Utils.Linq.Tests
     [TestClass]
     public class WhereNotTests
     {
+        private readonly int[] _testArray = { 3, 10, 2 };
+
         [TestMethod]
         public void WhereNot_should_filter_collection_not_including_predicate()
         {
-            throw new NotImplementedException();
+            var expected = new[] { 3, 2 };
+            var actual = _testArray.WhereNot(p => p == 10).ToArray();
+            Assert.AreEqual(expected, actual);
         }
     }
 }
